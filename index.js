@@ -38,7 +38,8 @@ async function run() {
       const result = await reviewCollection.find().toArray();
       res.send(result);
     });
-
+    
+    //carts collection
     app.post("/carts", async (req, res) => {
       const cartIteam = req.body;
       const result = await cartCollection.insertOne(cartIteam);
